@@ -1,0 +1,113 @@
+.gnb-top {
+  @include flexbox(between);
+  flex-grow: 1;
+  width: 100%;
+  height: 62px;
+  padding: 0 20px;
+
+  .menu-list {
+    @include flexbox;
+    padding: 0 20px;
+  }
+
+  .menu-item {
+    @include text-style(14, $gray);
+    font-weight: 400;
+    transition: color 0.1s ease-in-out;
+
+    a {
+      width: 100%;
+      padding: 20px 12px;
+    }
+  }
+
+  .menu-item:hover {
+    color: $black;
+  }
+
+  .submit-button {
+    @include inline-flexbox;
+    @include text-style(14, $gray);
+    @include tran;
+    height: 32px;
+    padding: 0 11px;
+    text-align: center;
+    background-color: $white;
+    border: 1px solid $border;
+    border-radius: 4px;
+
+    span {
+      padding-top: 2px;
+    }
+  }
+
+  .submit-button:hover {
+    color: $black;
+    border-color: $black;
+  }
+
+  .notification-button {
+    @include tran;
+    margin-left: 10px;
+
+    button {
+      padding: 3px 12px;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+
+      path {
+        fill: $gray;
+      }
+    }
+  }
+
+  .notification-button:hover {
+    path {
+      fill: $black;
+    }
+  }
+
+  .personal-menu-button {
+    margin-right: 5px;
+
+    .user-image {
+      width: 32px;
+      height: 32px;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .menu-button {
+    @include tran;
+    button {
+      @include flexbox;
+      width: 38px;
+      height: 38px;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+
+      path {
+        fill: $gray;
+      }
+    }
+  }
+
+  .menu-button:hover {
+    path {
+      fill: $black;
+    }
+  }
+}

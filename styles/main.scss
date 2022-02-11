@@ -8,3 +8,9 @@
 @import './mixins/positions';
 @import './mixins/flexbox';
 @import './mixins/transition';
+
+@import './layouts/container';
+@import './layouts/gnb';
+@import './layouts/gnb-top';
+
+@import './modal/search';
