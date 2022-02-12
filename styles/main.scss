@@ -3,12 +3,15 @@
 
 @import './constants/colors';
 @import './constants/typography';
+@import './constants/breakpoint';
 
 @import './mixins/text-style';
 @import './mixins/positions';
 @import './mixins/flexbox';
 @import './mixins/transition';
+@import './mixins/responsive';
 
+@import './layouts/grids';
 @import './layouts/container';
 @import './layouts/gnb';
 @import './layouts/gnb-top';
