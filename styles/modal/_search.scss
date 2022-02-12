@@ -10,7 +10,6 @@
     @include flexbox(start);
     width: 100%;
     height: 40px;
-    min-width: 330px;
   }
 
   &-icon {
@@ -52,7 +51,6 @@
       // min-width: 870px;
       // width: 100%;
       flex-grow: 1;
-      flex-shrink: 1;
       height: 100%;
       padding: 2px 2px 2px 5px;
     }
@@ -76,6 +74,14 @@
   &-visual-icon:hover {
     path {
       fill: $black;
+    }
+  }
+
+  @include responsive(md) {
+    margin-right: 8px;
+
+    &-visual-icon {
+      display: none;
     }
   }
 }

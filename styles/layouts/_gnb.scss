@@ -25,4 +25,20 @@
     height: 56px;
     padding: 0 20px;
   }
+
+  @include responsive(md) {
+    &-top {
+      height: 56px;
+      padding: 8px 12px;
+
+      .logo {
+        margin-right: 14px;
+      }
+
+      .logo-image svg {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
 }

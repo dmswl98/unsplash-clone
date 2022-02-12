@@ -1,5 +1,4 @@
 .gnb-nav {
-  overflow-x: hidden;
   background-color: $white;
 
   &-right {
@@ -53,5 +52,15 @@
 
   &-link:hover {
     color: $black;
+  }
+
+  @include responsive(md) {
+    margin-left: -24px;
+
+    &-link {
+      &.is-active {
+        @include text-style(14, $black);
+      }
+    }
   }
 }

@@ -68,12 +68,14 @@
   }
 
   .personal-menu-button {
+    @include flexbox;
     margin-right: 5px;
 
     .user-image {
       width: 32px;
       height: 32px;
       overflow: hidden;
+      border: 1px solid $border;
       border-radius: 50%;
     }
 
@@ -85,7 +87,9 @@
   }
 
   .menu-button {
+    @include flexbox;
     @include tran;
+
     button {
       @include flexbox;
       width: 38px;
@@ -105,6 +109,27 @@
   .menu-button:hover {
     path {
       fill: $black;
+    }
+  }
+
+  @include responsive(md) {
+    .menu-list {
+      display: none;
+    }
+
+    .submit-button {
+      display: none;
+    }
+
+    .notification-button {
+      display: none;
+    }
+
+    .personal-menu-button {
+      .user-image {
+        width: 27px;
+        height: 27px;
+      }
     }
   }
 }
