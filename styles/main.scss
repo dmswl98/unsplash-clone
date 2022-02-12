@@ -4,6 +4,7 @@
 @import './constants/colors';
 @import './constants/typography';
 @import './constants/breakpoint';
+@import './constants/dimensions';
 
 @import './mixins/text-style';
 @import './mixins/positions';
@@ -13,8 +14,13 @@
 
 @import './layouts/grids';
 @import './layouts/container';
+@import './layouts/global-header';
 @import './layouts/gnb';
 @import './layouts/gnb-top';
 @import './layouts/gnb-nav';
 
 @import './modal/search';
+
+body {
+  background-color: violet;
+}
