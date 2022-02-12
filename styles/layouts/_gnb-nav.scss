@@ -1,0 +1,57 @@
+.gnb-nav {
+  overflow-x: hidden;
+  background-color: $white;
+
+  &-right {
+    overflow-x: auto;
+  }
+
+  &-right::-webkit-scrollbar {
+    display: none;
+  }
+
+  &-list {
+    @include inline-flexbox(start);
+    height: 56px;
+  }
+
+  &-list-left {
+    margin-left: -20px;
+  }
+
+  &-list-left::after {
+    height: 32px;
+    padding-left: 24px;
+    border-right: 1px solid $border;
+    content: '';
+  }
+
+  &-item {
+    flex-shrink: 0;
+    height: 100%;
+    padding-left: 24px;
+
+    a {
+      @include inline-flexbox;
+    }
+  }
+
+  &-link {
+    @include tran(color);
+    @include text-style(14, $gray);
+    width: 100%;
+    height: 100%;
+    font-weight: 400;
+    text-align: center;
+    border-bottom: 2.5px solid transparent;
+
+    &.is-active {
+      @include text-style(15, $black);
+      border-bottom-color: $black;
+    }
+  }
+
+  &-link:hover {
+    color: $black;
+  }
+}
