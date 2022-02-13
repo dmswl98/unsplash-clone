@@ -1,6 +1,10 @@
 .gnb-nav {
   background-color: $white;
 
+  &-left {
+    margin-left: -5px;
+  }
+
   &-right {
     overflow-x: auto;
   }
