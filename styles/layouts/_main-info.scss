@@ -1,0 +1,67 @@
+.main-info {
+  &-top {
+    @include column-flexbox(center, initial);
+    width: 864px;
+    padding: 146px 0;
+
+    .title {
+      @include text-style(50, $white);
+      font-weight: 700;
+    }
+  }
+
+  .main-desc {
+    @include text-style(18, $white);
+    margin: 16px 0 24px 0;
+    font-weight: 400;
+  }
+
+  .license-link {
+    color: rgba($white, 0.8);
+    text-decoration: underline;
+  }
+
+  .license-link:hover {
+    color: $white;
+  }
+
+  &-bottom {
+    @include flexbox(between, end);
+    @include text-style(13, rgba($white, 0.5));
+    width: 100%;
+    padding: 0 20px 20px 20px;
+    font-weight: 300;
+
+    a {
+      color: rgba($white, 0.8);
+    }
+
+    a:hover {
+      color: $white;
+    }
+
+    a:hover .logo-img {
+      filter: brightness(1);
+    }
+
+    span {
+      display: inline-block;
+      padding: 0 1px;
+    }
+
+    &.left {
+      @include flexbox(start, end);
+    }
+
+    .right-wrapper div {
+      @include column-flexbox(center, end);
+    }
+
+    .logo-img {
+      width: 150px;
+      height: auto;
+      margin-bottom: 10px;
+      filter: brightness(0.8);
+    }
+  }
+}
