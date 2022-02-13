@@ -1,3 +1,7 @@
 .global-header {
-  height: $gnb-top-height + $gnb-nav-height;
+  height: $gnb-top-height-lg + $gnb-nav-height-lg;
+
+  @include responsive(md) {
+    height: $gnb-top-height-md + $gnb-nav-height-md;
+  }
 }

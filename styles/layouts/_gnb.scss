@@ -9,7 +9,7 @@
     @include flexbox(start);
     flex-grow: 1;
     width: 100%;
-    height: $gnb-top-height;
+    height: $gnb-top-height-lg;
     padding: 0 20px;
 
     .logo {
@@ -26,7 +26,7 @@
   &-nav {
     @include inline-flexbox(start);
     width: 100%;
-    height: $gnb-nav-height;
+    height: $gnb-nav-height-lg;
     padding: 0 20px;
   }
 
@@ -34,7 +34,7 @@
     width: 100%;
 
     &-top {
-      height: 56px;
+      height: $gnb-top-height-md;
       padding: 8px 12px;
 
       .logo {
