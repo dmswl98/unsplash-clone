@@ -1,12 +1,10 @@
 @mixin text-style-11() {
   font-size: $font-size-11;
-  font-weight: $font-weight-11;
   line-height: $line-height-11;
 }
 
 @mixin text-style-13() {
   font-size: $font-size-13;
-  font-weight: $font-weight-13;
   line-height: $line-height-13;
 }
 
@@ -30,9 +28,9 @@
   line-height: $line-height-24;
 }
 
-@mixin text-style-46() {
-  font-size: $font-size-46;
-  line-height: $line-height-46;
+@mixin text-style-50() {
+  font-size: $font-size-50;
+  line-height: $line-height-50;
 }
 
 @mixin text-style($size, $color: false) {
@@ -54,8 +52,8 @@
   @if ($size == 24) {
     @include text-style-24;
   }
-  @if ($size == 46) {
-    @include text-style-46;
+  @if ($size == 50) {
+    @include text-style-50;
   }
 
   @if (type-of($color) == color) {
