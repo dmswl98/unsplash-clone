@@ -2,7 +2,7 @@
   @include flexbox(start);
   flex-grow: 1;
   background-color: $background;
-  border: 1px solid #fff;
+  border: 1px solid $white;
   border-radius: 24px;
   transition: border 0.1s ease-in-out;
 
@@ -87,5 +87,5 @@
 }
 
 .search:hover {
-  border: 1px solid #d1d1d1;
+  border: 1px solid $border;
 }
