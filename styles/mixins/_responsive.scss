@@ -1,13 +1,20 @@
 @mixin responsive($screen) {
+  @if ($screen == 'sm') {
+    // small - 480px
+    @media screen and (max-width: $sm-breakpoint) {
+      @content;
+    }
+  }
+
   @if ($screen == 'md') {
-    // middle
+    // middle - 768px
     @media screen and (max-width: $md-breakpoint) {
       @content;
     }
   }
   @if ($screen == 'lg') {
-    // large
-    @media screen and (min-width: $lg-breakpoint) {
+    // large - 992px
+    @media screen and (max-width: $lg-breakpoint) {
       @content;
     }
   }
