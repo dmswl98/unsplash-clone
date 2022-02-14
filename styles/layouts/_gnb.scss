@@ -5,6 +5,7 @@
   left: 0;
   z-index: $gnb-level;
   width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
   &-top {
     @include flexbox(start);
