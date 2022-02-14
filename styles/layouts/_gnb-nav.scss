@@ -49,7 +49,7 @@
     border-bottom: 2.5px solid transparent;
 
     &.is-active {
-      @include text-style(15, $black);
+      @include text-style(14, $black);
       border-bottom-color: $black;
     }
   }
