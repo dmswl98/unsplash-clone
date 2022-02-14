@@ -81,6 +81,10 @@
       display: none;
     }
   }
+
+  @include responsive(md) {
+    display: none;
+  }
 }
 
 .search:hover {
