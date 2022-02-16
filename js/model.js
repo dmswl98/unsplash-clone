@@ -1,0 +1,31 @@
+import { URL, KEY } from './config';
+export const state = {
+  image: [],
+};
+
+const createImageObject = function (data) {
+  return data.map((img) => {
+    return {
+      id: img.id,
+      imageFile: img.urls.small,
+      downloadLink: img.links.html,
+      description: img.description ? img.description.trim() : null,
+      userProfileLink: img.user.links.html,
+      userName: img.user.name,
+      userHired: img.user.for_hire,
+      userImage: img.user.profile_image.large,
+    };
+  });
+};
+
+export const loadImg = async function (count = 10) {
+  try {
+    const res = await fetch(`${URL}/?count=${count}&client_id=${KEY}`);
+    const data = await res.json();
+    console.log(data);
+    state.image = createImageObject(data);
+    console.log(state);
+  } catch (err) {
+    throw err;
+  }
+};
