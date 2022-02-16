@@ -13,14 +13,16 @@
 @import './mixins/transition';
 @import './mixins/responsive';
 
-@import './layouts/grids';
 @import './layouts/container';
-@import './layouts/global-header';
-@import './layouts/gnb';
-@import './layouts/gnb-top';
-@import './layouts/gnb-nav';
-@import './layouts/main';
-@import './layouts/main-info';
+
+@import './component/global-header';
+@import './component/gnb';
+@import './component/gnb-top';
+@import './component/gnb-nav';
+@import './component/main';
+@import './component/main-info';
+
+@import './component/images-section';
 
 @import './modal/search';
 @import './modal/main-search';
