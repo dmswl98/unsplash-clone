@@ -6,11 +6,63 @@
   }
 
   &-right {
+    position: relative;
     overflow-x: auto;
   }
 
   &-right::-webkit-scrollbar {
     display: none;
+  }
+
+  &-scroll {
+    @include flexbox(between);
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 100%;
+    padding-left: 12px;
+  }
+
+  &-scroll::before,
+  &-scroll::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block;
+    width: 122px;
+    height: 100%;
+    content: '';
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  &-scroll::before {
+    left: 0;
+    margin-left: 22px;
+    background: linear-gradient(270deg, #fff0 0, #fff 90%, #fff);
+  }
+
+  &-scroll::after {
+    right: 0;
+    background: linear-gradient(90deg, #fff0 0, #fff 90%, #fff);
+  }
+
+  .scroll-arrow {
+    z-index: $scroll-arrow-level;
+
+    svg {
+      width: 22px;
+      height: 22px;
+
+      path {
+        fill: $gray;
+      }
+    }
+  }
+
+  .scroll-arrow:hover {
+    path {
+      fill: $black;
+    }
   }
 
   &-list {
