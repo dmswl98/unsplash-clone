@@ -30,16 +30,39 @@ const controlScroll = function () {
 };
 
 const controlInputStyle = function () {
-  const inputContainer = document.querySelector('.search');
-  const input = document.querySelector('.search-input input');
-  input.addEventListener('focus', function (e) {
-    inputContainer.style.backgroundColor = '#fff';
-    inputContainer.style.borderColor = '#d1d1d1';
+  const navInputContainer = document.querySelector('.search');
+  const mainInputContainer = document.querySelector('.main-search');
+  const navInput = document.querySelector('.search-input input');
+  const mainInput = document.querySelector('.main-search-input input');
+  const shortPlaceholder = 'Search photos';
+  const longPlaceholder = 'Search free high-resolution photos';
+  //0 0 0 5px #0003
+  window.addEventListener(
+    'resize',
+    (e) => {
+      if (window.innerWidth <= 992) {
+        navInput.setAttribute('placeholder', shortPlaceholder);
+        mainInput.setAttribute('placeholder', shortPlaceholder);
+      } else {
+        navInput.setAttribute('placeholder', longPlaceholder);
+        mainInput.setAttribute('placeholder', longPlaceholder);
+      }
+    },
+    true
+  );
+
+  [navInput, mainInput].forEach((item) => {
+    item.addEventListener('focus', function () {
+      if (item === navInput) navInputContainer.classList.toggle('focus');
+      if (item === mainInput) mainInputContainer.classList.toggle('focus');
+    });
   });
 
-  input.addEventListener('focusout', function (e) {
-    inputContainer.style.backgroundColor = '#eee';
-    inputContainer.style.borderColor = '#fff';
+  [navInput, mainInput].forEach((item) => {
+    item.addEventListener('focusout', function () {
+      if (item === navInput) navInputContainer.classList.toggle('focus');
+      if (item === mainInput) mainInputContainer.classList.toggle('focus');
+    });
   });
 };
 
@@ -62,6 +85,9 @@ const controlSearch = async function () {
 };
 
 const controlPagination = async function (goToPage) {
+  // move to top
+  scrollTo(0, 0);
+
   await model.loadSearchResults(model.state.search.query, goToPage);
   model.setCurrentPage(goToPage);
 

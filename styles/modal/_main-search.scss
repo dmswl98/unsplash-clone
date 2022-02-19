@@ -1,8 +1,8 @@
 .main-search {
   @include flexbox(start);
   flex-grow: 1;
-  background-color: $white;
-  border: 1px solid #fff;
+  background-color: #f5f5f5;
+  border: 1px solid #f5f5f5;
   border-radius: 4px;
   transition: border 0.1s ease-in-out;
 
@@ -72,6 +72,11 @@
     path {
       fill: $black;
     }
+  }
+
+  &.focus {
+    background-color: $white;
+    border-color: $white;
   }
 
   @include responsive(md) {

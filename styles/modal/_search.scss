@@ -77,6 +77,11 @@
     }
   }
 
+  &.focus {
+    background-color: $white;
+    border-color: $border;
+  }
+
   @include responsive(md) {
     margin-right: 8px;
 
