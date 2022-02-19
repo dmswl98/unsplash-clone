@@ -1,10 +1,10 @@
 .search {
   @include flexbox(start);
+  @include tran;
   flex-grow: 1;
   background-color: $background;
   border: 1px solid $white;
   border-radius: 24px;
-  transition: border 0.1s ease-in-out;
 
   form {
     @include flexbox(start);
