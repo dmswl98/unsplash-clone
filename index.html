@@ -28,9 +28,9 @@
             </div>
           </a>
           <div class="search">
-            <form action="" class="search-form" title="Search Unplash">
+            <form class="search-form" title="Search Unplash">
               <div class="search-icon">
-                <button class="search-icon-button">
+                <button class="search-icon-button" type="button">
                   <svg width="32" height="32" class="DFW_E nT46U VETef" viewBox="0 0 32 32" version="1.1"
                     aria-hidden="false">
                     <path
@@ -111,22 +111,6 @@
           </div>
 
           <div class="gnb-nav-right">
-            <div class="gnb-nav-scroll">
-              <div class="scroll-arrow scroll-left">
-                <button type="button" title="scroll list to the left">
-                  <svg width="24" height="24" class="DG_Wq" viewBox="0 0 32 32" version="1.1" aria-hidden="false">
-                    <path d="M20.6667 24.6666l-2 2L8 16 18.6667 5.3333l2 2L12 16l8.6667 8.6666z"></path>
-                  </svg>
-                </button>
-              </div>
-              <div class="scroll-arrow scroll-right">
-                <button type="button" title="scroll list to the right">
-                  <svg width="24" height="24" class="DG_Wq" viewBox="0 0 32 32" version="1.1" aria-hidden="false">
-                    <path d="M11.3333 7.3333l2-2L24 16 13.3333 26.6666l-2-2L20 16l-8.6667-8.6667z"></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
             <ul class="gnb-nav-list gnb-nav-list-right">
               <li class="gnb-nav-item"><a href="#" class="gnb-nav-link"><span>Wallpapers</span></a></li>
               <li class="gnb-nav-item"><a href="#" class="gnb-nav-link"><span>3D Renders</span></a></li>
@@ -150,6 +134,22 @@
               <li class="gnb-nav-item"><a href="#" class="gnb-nav-link"><span>History</span></a></li>
               <li class="gnb-nav-item"><a href="#" class="gnb-nav-link"><span>Athletics</span></a></li>
             </ul>
+            <div class="gnb-nav-scroll">
+              <div class="scroll-arrow scroll-left">
+                <button type="button" title="scroll list to the left" class="scroll-btn-left">
+                  <svg width="24" height="24" class="DG_Wq" viewBox="0 0 32 32" version="1.1" aria-hidden="false">
+                    <path d="M20.6667 24.6666l-2 2L8 16 18.6667 5.3333l2 2L12 16l8.6667 8.6666z"></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="scroll-arrow scroll-right">
+                <button type="button" title="scroll list to the right" class="scroll-btn-right">
+                  <svg width="24" height="24" class="DG_Wq" viewBox="0 0 32 32" version="1.1" aria-hidden="false">
+                    <path d="M11.3333 7.3333l2-2L24 16 13.3333 26.6666l-2-2L20 16l-8.6667-8.6667z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
         </nav>
       </div>
@@ -157,6 +157,17 @@
 
     <main class="main">
       <div class="main-wrapper">
+        <!-- <div class="search-result">
+          <h1>Chocolate</h1>
+          <div class="search-result-total">
+            <svg width="32" height="32" class="Gdg38" viewBox="0 0 32 32" version="1.1" aria-hidden="false">
+              <path
+                d="M26.7 4H5.3C4.5 4 4 4.5 4 5.3v21.3c0 .9.5 1.4 1.3 1.4h21.3c.8 0 1.3-.5 1.3-1.3V5.3c.1-.8-.4-1.3-1.2-1.3zm-20 20l4.7-6 3.3 4 4.7-6 6 8H6.7z">
+              </path>
+            </svg>
+            <p>Photos<span class="count">&nbsp;6k</span></p>
+          </div>
+        </div> -->
         <div class="main-image">
           <img src="./landing-image.jpg" alt="Uplash main image">
         </div>
@@ -222,6 +233,25 @@
 
     <section class="images-section">
       <div class="images-wrapper">
+      </div>
+      <div class="pagination">
+        <div class="page-btn">
+          <!-- <button class="btn btn-prev" type="button">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+              <path d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z" />
+            </svg>
+            <span class="page-num">1</span>
+          </button>
+          <button class="btn btn-current" type="button">
+            <span class="page-num">2</span>
+          </button>
+          <button class="btn btn-next" type="button">
+            <span class="page-num">3</span>
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+              <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+            </svg>
+          </button> -->
+        </div>
       </div>
     </section>
   </div>
