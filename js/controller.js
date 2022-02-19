@@ -43,8 +43,37 @@ const controlInputStyle = function () {
   });
 };
 
+const controlSearch = async function () {
+  try {
+    const query = searchView.getQuery();
+    console.log(query);
+    if (!query) return;
+
+    await model.loadSearchResults(query);
+
+    const imgList = model.state.search.results;
+    searchView.setSearchTitle(model.state.search);
+    searchView.render(imgList, 3);
+
+    paginationView.render(model.state.search);
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+const controlPagination = async function (goToPage) {
+  await model.loadSearchResults(model.state.search.query, goToPage);
+  model.setCurrentPage(goToPage);
+
+  const imgList = model.state.search.results;
+  searchView.render(imgList, 3);
+  paginationView.render(model.state.search);
+};
+
 const init = function () {
   window.addEventListener('load', controlImage);
   controlInputStyle();
+  searchView.addHandlerSearch(controlSearch);
+  paginationView.addHandlerClick(controlPagination);
 };
 init();

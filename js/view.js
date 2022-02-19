@@ -1,5 +1,4 @@
-class View {
-  _parentElement = document.querySelector('.images-wrapper');
+export default class View {
   _data;
   _dataList = [];
 
@@ -9,10 +8,16 @@ class View {
     this._data = data;
     const markup = this._generateMarkup(group);
 
+    this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
+  _clear() {
+    this._parentElement.innerHTML = '';
+  }
+
   _generateMarkup(group) {
+    this._dataList = [];
     const itemCount = this._data.length / group; // 10
     for (let i = 0; i < group; i++)
       this._dataList.push(this._data.slice(i * itemCount, (i + 1) * itemCount));
@@ -98,5 +103,3 @@ class View {
       .join('');
   }
 }
-
-export default new View();
