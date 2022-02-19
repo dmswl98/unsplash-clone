@@ -2,7 +2,8 @@ import View from './view';
 
 class SearchView extends View {
   _parentElement = document.querySelector('.images-wrapper');
-  _titleElement = document.querySelector('.main-wrapper');
+  _titleElement = document.querySelector('.search-result');
+  _clearElement = document.querySelector('.main');
   _formEl = document.querySelector('.search-form');
 
   getQuery() {
@@ -21,12 +22,11 @@ class SearchView extends View {
   setSearchTitle(data) {
     const query = data.query;
     const title = query.slice(0, 1).toUpperCase() + query.slice(1);
-    this._titleElement.innerHTML = '';
-    this._titleElement.style.height = '100%';
+    this._clearElement.innerHTML = '';
     const markup = `
-      <div class="search-result">
+    <div class="search-word">
         <h1>${title}</h1>
-        <div class="search-result-total">
+        <div class="total">
           <svg width="32" height="32" class="Gdg38" viewBox="0 0 32 32" version="1.1" aria-hidden="false">
             <path
               d="M26.7 4H5.3C4.5 4 4 4.5 4 5.3v21.3c0 .9.5 1.4 1.3 1.4h21.3c.8 0 1.3-.5 1.3-1.3V5.3c.1-.8-.4-1.3-1.2-1.3zm-20 20l4.7-6 3.3 4 4.7-6 6 8H6.7z">

@@ -8,6 +8,34 @@
     grid-column-gap: 1.5rem;
   }
 
+  .search-result {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .search-word {
+    @include flexbox(start, baseline);
+    @include text-style(24, $black);
+    max-width: 1320px;
+    margin: 72px 0;
+
+    .total {
+      @include flexbox;
+      margin: 0 20px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+        margin-right: 4px;
+      }
+
+      p {
+        @include text-style(14, $black);
+        padding-top: 1.5px;
+      }
+    }
+  }
+
   .images-list {
     @include column-flexbox(start);
   }
