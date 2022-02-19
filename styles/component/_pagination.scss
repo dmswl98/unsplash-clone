@@ -1,0 +1,39 @@
+.pagination {
+  @include flexbox;
+  width: 100%;
+  margin: 30px 0 45px 0;
+
+  .page-btn {
+    @include flexbox(between);
+    width: 250px;
+
+    .btn {
+      @include text-style(15, $black);
+      @include tran;
+      @include flexbox;
+      padding: 5px 12px;
+      background-color: rgba($gray, 0.2);
+      border-radius: 24px;
+    }
+
+    .btn:hover {
+      background-color: rgba($gray, 0.4);
+    }
+
+    svg {
+      transform: scale(0.8);
+    }
+  }
+
+  .btn-prev {
+    .page-num {
+      margin-left: 10px;
+    }
+  }
+
+  .btn-next {
+    .page-num {
+      margin-right: 10px;
+    }
+  }
+}
