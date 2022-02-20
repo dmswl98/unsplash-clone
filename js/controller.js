@@ -3,10 +3,6 @@ import searchView from './searchView';
 import mainView from './mainView';
 import paginationView from './paginationView';
 
-// if (module.hot) {
-//   module.hot.accept();
-// }
-
 const controlImage = async function () {
   await model.loadImg(30);
   const imgList = model.state.image;
@@ -36,7 +32,7 @@ const controlInputStyle = function () {
   const mainInput = document.querySelector('.main-search-input input');
   const shortPlaceholder = 'Search photos';
   const longPlaceholder = 'Search free high-resolution photos';
-  //0 0 0 5px #0003
+
   window.addEventListener(
     'resize',
     (e) => {
@@ -74,10 +70,18 @@ const controlSearch = async function () {
 
     await model.loadSearchResults(query);
 
-    const imgList = model.state.search.results;
     searchView.setSearchTitle(model.state.search);
-    searchView.render(imgList, 3);
 
+    const imgList = model.state.search.results;
+
+    // No results
+    if (!imgList.length) {
+      searchView.renderError();
+      paginationView.renderError();
+      return;
+    }
+
+    searchView.render(imgList, 3);
     paginationView.render(model.state.search);
   } catch (err) {
     console.error(err);
@@ -85,7 +89,7 @@ const controlSearch = async function () {
 };
 
 const controlPagination = async function (goToPage) {
-  // move to top
+  // Move to top
   scrollTo(0, 0);
 
   await model.loadSearchResults(model.state.search.query, goToPage);
@@ -97,9 +101,12 @@ const controlPagination = async function (goToPage) {
 };
 
 const init = function () {
-  window.addEventListener('load', controlImage);
+  // Image load
+  controlImage();
   controlInputStyle();
+  // Show search results
   searchView.addHandlerSearch(controlSearch);
+  // pagination for search results
   paginationView.addHandlerClick(controlPagination);
 };
 init();

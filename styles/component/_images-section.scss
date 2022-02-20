@@ -177,6 +177,14 @@
     }
   }
 
+  .no-result {
+    img {
+      display: block;
+      width: 300px;
+      height: 225px;
+    }
+  }
+
   @include responsive(lg) {
     .images-wrapper {
       grid-template-columns: repeat(2, 1fr);
