@@ -30,30 +30,6 @@
     height: 100%;
   }
 
-  // .search-result {
-  //   @include flexbox(start, baseline);
-  //   @include text-style(24, $black);
-  //   max-width: 1320px;
-  //   padding: 72px 12px;
-  //   margin: 0 85px;
-
-  //   &-total {
-  //     @include flexbox;
-  //     margin: 0 20px;
-
-  //     svg {
-  //       width: 18px;
-  //       height: 18px;
-  //       margin-right: 4px;
-  //     }
-
-  //     p {
-  //       @include text-style(14, $black);
-  //       padding-top: 1.5px;
-  //     }
-  //   }
-  // }
-
   @include responsive(md) {
     &-wrapper {
       height: 312px;
