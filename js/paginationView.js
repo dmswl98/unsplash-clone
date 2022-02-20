@@ -18,9 +18,9 @@ class PaginationView extends View {
     // Page 1, and there are otehr pages
     if (curPage === 1 && lastPage > 1) {
       return `
-        <button class="btn btn-current" type="button">
+        <div class="btn-current">
           <span class="page-num">${curPage}</span>
-        </button>
+        </div>
         <button data-goto=${curPage + 1} class="btn btn-next" type="button">
           <span class="page-num">${curPage + 1}</span>
           <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
@@ -38,9 +38,9 @@ class PaginationView extends View {
           </svg>
           <span class="page-num">${curPage - 1}</span>
         </button>
-        <button class="btn btn-current" type="button">
+        <div class="btn-current">
           <span class="page-num">${curPage}</span>
-        </button>
+        </div>
       `;
     }
     // Other page
@@ -52,9 +52,9 @@ class PaginationView extends View {
           </svg>
           <span class="page-num">${curPage - 1}</span>
         </button>
-        <button class="btn btn-current" type="button">
+        <div class="btn-current">
           <span class="page-num">${curPage}</span>
-        </button>
+        </div>
         <button data-goto=${curPage + 1} class="btn btn-next" type="button">
           <span class="page-num">${curPage + 1}</span>
           <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
@@ -65,6 +65,10 @@ class PaginationView extends View {
     }
     // Page 1, and there are NO otehr pages
     return '';
+  }
+
+  renderError() {
+    this._clear();
   }
 }
 

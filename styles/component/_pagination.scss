@@ -6,34 +6,50 @@
   .page-btn {
     @include flexbox(between);
     width: 250px;
+  }
 
-    .btn {
-      @include text-style(15, $black);
-      @include tran;
+  .btn {
+    &-prev,
+    &-current,
+    &-next {
       @include flexbox;
-      padding: 5px 12px;
+      padding: 4px 12px;
       background-color: rgba($gray, 0.2);
       border-radius: 24px;
     }
 
-    .btn:hover {
+    &-prev,
+    &-next {
+      @include text-style(15, $black);
+      @include tran;
+    }
+
+    &-prev {
+      .page-num {
+        margin-left: 10px;
+      }
+    }
+
+    &-current {
+      @include text-style(14, $black);
+    }
+
+    &-next {
+      .page-num {
+        margin-right: 10px;
+      }
+    }
+
+    &-prev:hover {
       background-color: rgba($gray, 0.4);
     }
 
-    svg {
-      transform: scale(0.8);
+    &-next:hover {
+      background-color: rgba($gray, 0.4);
     }
   }
 
-  .btn-prev {
-    .page-num {
-      margin-left: 10px;
-    }
-  }
-
-  .btn-next {
-    .page-num {
-      margin-right: 10px;
-    }
+  svg {
+    transform: scale(0.8);
   }
 }
