@@ -9,22 +9,6 @@ const controlImage = async function () {
   mainView.render(imgList, 3);
 };
 
-const controlScroll = function () {
-  const navigation = document.querySelector('.gnb-nav-right');
-  const scrollLeftBtn = document.querySelector('.scroll-btn-left');
-  const scrollRightBtn = document.querySelector('.scroll-btn-right');
-
-  const left = navigation.scrollLeft;
-
-  // scrollLeftBtn.addEventListener('click', function () {
-  //   navigation.scrollLeft(left + 100);
-  // });
-
-  navigation.addEventListener('scroll', function (e) {
-    console.log(e);
-  });
-};
-
 const controlInputStyle = function () {
   const navInputContainer = document.querySelector('.search');
   const mainInputContainer = document.querySelector('.main-search');
