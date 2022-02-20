@@ -1,4 +1,4 @@
-import { FETCH_URL, URL, KEY } from './config';
+import { API_URL, URL, KEY } from './config';
 export const state = {
   image: [],
   search: {
@@ -27,7 +27,9 @@ const createImageObject = function (data) {
 
 export const loadImg = async function (count = 10) {
   try {
-    const res = await fetch(`${FETCH_URL}/?count=${count}&client_id=${KEY}`);
+    const res = await fetch(
+      `${API_URL}/photos/random/?count=${count}&client_id=${KEY}`
+    );
     const data = await res.json();
     console.log(data);
     state.image = createImageObject(data);
@@ -45,7 +47,7 @@ export const loadSearchResults = async function (query, page = 1) {
   try {
     state.search.query = query;
     const res = await fetch(
-      `https://api.unsplash.com/search/photos?page=${page}&query=${query}&client_id=${KEY}`
+      `${API_URL}/search/photos?page=${page}&query=${query}&client_id=${KEY}`
     );
     const data = await res.json();
     console.log(data);
