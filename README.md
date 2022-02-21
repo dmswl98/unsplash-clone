@@ -21,4 +21,5 @@ unsplash-clone project with [Unsplash image API](https://unsplash.com/developers
 - Fetch random images
 - 특정 이미지 검색 기능
 - 각 사진의 정보 미리보기
+- Redirect to download link of image
 - responsive web page
