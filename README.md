@@ -4,7 +4,9 @@ unsplash-clone project with [Unsplash image API](https://unsplash.com/developers
 
 
 ## 1. Preview
-**demo link** -> https://unsplash-clone-dmswl98.netlify.app
+**UNSPLASH LINK** https://unsplash.com/
+🆚
+**DEMO LINK** https://unsplash-clone-dmswl98.netlify.app
 
 1. Main page
 
@@ -20,6 +22,6 @@ unsplash-clone project with [Unsplash image API](https://unsplash.com/developers
 
 - Fetch random images
 - 특정 이미지 검색 기능
-- 각 사진의 정보 미리보기
+- 각 사진의 정보 미리보기 
 - Redirect to download link of image
 - responsive web page
